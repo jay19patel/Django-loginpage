@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="btn btn-info" >Login</button> 
+ </form>
+<!-- 
+<section>
+    <div class="container">
+        <br>
+        <div><h1 class="text-center bg-success text-white" > Registation Here </h1></div>
+        <br>
+        <form action="" method="post">          
+            <div class="container">
+                <label ><b>Name : </b></label>
+              <input type="text" placeholder="Enter Name" autocomplete="off" name="name" required>
+                <br><br>
+              <label ><b>Username :</b></label>
+              <input type="text" placeholder="Enter Username" autocomplete="off" name="uname" required>
+                <br><br>
+              <label ><b>Password :</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+              <br><br></b>
+              <label ><b>Repassword :</b></label>
+              <input type="password" placeholder="Enter Password" name="rpsw" required>
+            </div>         
+            <div class="container">
+                <br>
+            <button type="submit" class="btn btn-info" >Login</button> 
+            <a href="{% url 'Homepage'%}"><button type="button" class="btn btn-danger">Cancel</button></a>
+            <br><br>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </form>
+    </div>
+</section>  -->
+
+{% endblock content %}
