@@ -1,2 +1,12 @@
 
+{% for message in messages %}
+<div class="alert alert-info" role="alert">
+    <h4 class="alert-heading">Notification!!</h4>
+    <p>{{ message }}</p>
+    <hr>
+</div>
+
+{% endfor %}
+
+
 <div class="p-3 mb-2 bg-primary text-white"><h1 class="text-center">Home Page </h1></div>

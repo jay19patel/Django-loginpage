@@ -3,15 +3,27 @@
 {% block content %}
 
 <div class="container">
+    <h1 class="text-center"> Welcome :)</h1>
+    {% if user.is_authenticated %}
+    <h1 class="text-center"> {{ user.username }} Ji</h1>
+    <div class="text-center"><a href="{% url 'Logout'%}"><button type="button" class="btn btn-success" clas="text-center">Logout</button></a>
+    </div>
+    {% else %}
     <h1 class="text-center"> Login Or Registration Here </h1>
     <hr>
- <div class="text-center"><a href="{% url 'Loginpage'%}"><button type="button" class="btn btn-success" clas="text-center">Login</button></a>
+
+    <div class="text-center"><a href="{% url 'Loginpage'%}"><button type="button" class="btn btn-success" clas="text-center">Login</button></a>
+    
     <a href="{% url 'Registrationpage'%}"><button type="button" class="btn btn-info" clas="text-center">Registration</button></a></div>
-<hr><br><br><br><br>
- <h1 class="text-center"> Welcome :) </h1>
+    
+    <hr><br><br>
+    <br><br>
 
-
-
+    {% endif %}
+    <hr><br><br>
+    <br><br>
+    <div class="text-center"><a href="{% url 'Test'%}"><button type="button" class="btn btn-info" clas="text-center">Test Page</button></a></a>
+    
 </div>
 
 
